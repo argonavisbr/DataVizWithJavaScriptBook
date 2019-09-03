@@ -46,14 +46,9 @@
     });
 
 
-    // Inserting and appending elements
-
-    d3.select("#section)     // context is element with id #section
-      .insert("p", '.first') // add a <p> before the child of class ‘.first’
-      .append('a')           // context is <p>: insert an <a> as child
-      .attr('href', 'https://d3js.org').text("D3 website"); // context is <a>
-
-    const div = d3.select('div')  // context is first <div> in page
+    // Removing elements
+    // This will remove "Paragraph 2"
+    d3.select('div')  // context is first <div> in page
                   .select('p:last-of-type') // context is last <p> in <div>
                   .remove(); // context is detached <p> (parentNode is null)
 
